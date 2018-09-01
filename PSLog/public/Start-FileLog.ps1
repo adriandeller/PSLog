@@ -36,7 +36,7 @@ Function Start-FileLog
     Process
     {
         $Script:Settings["File"].Enabled = $false
-
+        
         # First attempt to remove existing file if necessary
         if (!$Append -and (Test-Path -LiteralPath $Path))
         {
