@@ -15,12 +15,15 @@
 Function Start-FileLog
 {
     [CmdletBinding()]
-    Param (
+    Param
+    (
         [Parameter(Mandatory = $true)]
-        [string]$Path,
+        [string]
+        $Path,
 
         [Parameter()]
-        [switch]$Append,
+        [switch]
+        $Append,
 
         [Parameter(Mandatory = $false)]
         [Severity]
@@ -72,5 +75,8 @@ Function Start-FileLog
         Write-Verbose "[$Command] Enabled = $($Script:Settings["File"].Enabled)"
         Write-Verbose "[$Command] LogLevel = $LogLevel ($($Script:Settings["File"].LogLevel))"
         Write-Verbose "[$Command] Path = $($Script:Settings["File"].Path)"
+    }
+    End
+    {
     }
 }

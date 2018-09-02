@@ -39,8 +39,10 @@ enum Indicator
 #Region Set default settings for each of the log types
 $Script:PSLog = @{
 
-    Instances = @{}
-
+    #Instances = @{}
+    #$Instances = New-Object System.Collections.ArrayList
+    Instances = $null
+    
     Settings  = @{
         File  = New-Object -TypeName psobject -Property @{
             Enabled  = $false
@@ -97,4 +99,4 @@ $Script:PSLog = @{
 
 
 # Array to hold log entries that will be e-mailed when using e-mail logging.
-$Script:LogEntries = @()
+#$Script:LogEntries = @()

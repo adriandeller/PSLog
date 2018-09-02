@@ -91,6 +91,9 @@ function Write-Log
     {
         $Command = (Get-PSCallStack)[0].Command
 
+        $LogInstances = Get-LogInstances
+        $LogInstances
+
         # Replace variable with value from PSBoundParameters, if explicit set
         #   this is important because of dynamic parameter and default value...
         if ($PSBoundParameters.ContainsKey('Severity'))
